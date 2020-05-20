@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_19_154017) do
+ActiveRecord::Schema.define(version: 2020_05_20_155425) do
+
+  create_table "signups", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "subject_id"
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.boolean "registered"
     t.integer "grade"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "name"
+    t.string "teacher"
+    t.boolean "honors"
   end
 
 end
