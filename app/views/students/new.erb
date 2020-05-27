@@ -1,0 +1,13 @@
+<h2>Make A New Student</h2>
+
+<form action="/students" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="student[name]">
+  <label for="age">Age:</label>
+  <input type="number" name="student[age]">
+  <label for="grade">Grade:</label>
+  <input type="number" name="student[grade]" min="1" max="12">
+  <label for="registered">Registered:</label>
+  <input type="checkbox" name="student[registered]" value=1>
+  <input type="submit" name="submit" value="Make A New Student!">
+</form>

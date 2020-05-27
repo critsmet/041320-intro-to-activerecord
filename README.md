@@ -14,5 +14,10 @@
 - What is Sinatra and what is Rack?
 - Go over MVC Pattern
 - 7 Restful Routes
-- ERB 
+- ERB
 - Introduce Corneal
+
+## Sinatra Crud
+
+- Review what the 7 Restful Routes are
+- Start building out all CRUD actions 
