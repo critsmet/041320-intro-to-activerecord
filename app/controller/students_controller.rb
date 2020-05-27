@@ -26,6 +26,24 @@ class StudentsController < ApplicationController
     erb :'students/show'
   end
 
+  #edit
+  get '/students/:id/edit' do
+    @student = Student.find_by(id: params[:id])
+    erb :'students/edit'
+  end
 
+  #update
+  put '/students/:id' do
+    student = Student.find_by(id: params[:id])
+    student.update(params[:student])
+    redirect to "/students/#{student.id}"
+  end
+
+  #destroy
+  delete '/students/:id' do
+    student = Student.find_by(id: params[:id])
+    student.destroy
+    redirect to "/students"
+  end
 
 end

@@ -1,0 +1,20 @@
+<h2>Edit A New Student</h2>
+
+<form action=<%= "/students/#{@student.id}" %> method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="name">Name:</label>
+  <input type="text" name="student[name]" value=<%= @student.name %>>
+  <label for="age">Age:</label>
+  <input type="number" name="student[age]" value=<%= @student.age %>>
+  <label for="grade">Grade:</label>
+  <input type="number" name="student[grade]" min="1" max="12" value=<%= @student.grade %>>
+  <label for="registered">Registered:</label>
+  <input type="checkbox" name="student[registered]" value=1 <%= @student.registered && "checked" %>>
+  <input type="submit" value="Update That Student!">
+</form>
+<br>
+<br>
+<form action=<%= "/students/#{@student.id}" %> method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value=<%= "Delete #{@student.name}" %>>
+</form>

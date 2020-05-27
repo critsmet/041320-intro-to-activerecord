@@ -3,7 +3,9 @@
 <ul>
   <li>Grade: <%= @student.grade %></li>
   <li>Age: <%= @student.age %></li>
-  <li>Registered: <%= @student.registered %></li>
+  <li>Registered: <%= @student.registered ? "true" : "false"%></li>
 </ul>
 
+<a href=<%= "/students/#{@student.id}/edit" %>>Edit <%= @student.name %></a>
+<br />
 <a href="/students">All Students</a>
